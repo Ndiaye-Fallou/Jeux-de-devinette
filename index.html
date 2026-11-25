@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Devine le nombre</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="confetti"></canvas>
+
+  <main class="card">
+    <header class="top">
+      <h1>🎯 Devine le nombre</h1>
+      <button id="theme-btn" class="icon-btn" type="button" aria-label="Changer de thème">🌙</button>
+    </header>
+
+    <p id="consigne" class="consigne"></p>
+
+    <div class="difficulty" id="difficulty">
+      <button type="button" data-level="facile">Facile</button>
+      <button type="button" data-level="moyen" class="active">Moyen</button>
+      <button type="button" data-level="difficile">Difficile</button>
+    </div>
+
+    <div class="stats">
+      <div>
+        <span class="label">Essais restants</span>
+        <div class="pills" id="pills"></div>
+      </div>
+      <div class="best">🏆 Meilleur score : <strong id="best">—</strong></div>
+    </div>
+
+    <div class="range">
+      <div class="range-track">
+        <div class="range-fill" id="range-fill"></div>
+      </div>
+      <div class="range-labels">
+        <span id="range-min">1</span>
+        <span id="range-text">Entre 1 et 100</span>
+        <span id="range-max">100</span>
+      </div>
+    </div>
+
+    <form id="form" class="form">
+      <input type="number" id="guess" inputmode="numeric" placeholder="Ton nombre" autocomplete="off">
+      <button type="submit" id="submit" class="primary">Valider</button>
+    </form>
+
+    <p id="message" class="message" role="status" aria-live="polite"></p>
+
+    <section class="history">
+      <h2>Historique</h2>
+      <ul id="history"></ul>
+    </section>
+
+    <button type="button" id="replay" class="primary hidden">Rejouer</button>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
